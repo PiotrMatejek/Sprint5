@@ -49,7 +49,6 @@ function reverseText(text) {
 }
 
 const usersNicknames = addPeopleNickname(users);
-console.log(usersNicknames);
 
 // // ZAD 2 //
 
@@ -71,14 +70,13 @@ function addUsersAge(usersNicknames) {
 }
 function countLengthKeys(user) {
   let counter = 0;
-  for (let char of Object.keys(user)) {
+  for (const char of Object.keys(user)) {
     counter += char.length;
   }
   return counter;
 }
 
 const userAge = addUsersAge(copyUsers);
-console.log(userAge);
 
 // // Zad 3 //
 
@@ -136,7 +134,7 @@ function checkColors(copyPeople3, number = 5) {
     let counter = 0;
     const userKeyValue = Object.entries(user).slice(0, 3);
 
-    for (let char of userKeyValue) {
+    for (const char of userKeyValue) {
       counter += char[0].length + char[1].length;
     }
 
